@@ -28,21 +28,49 @@ body {
 
 /* ===== Header/Hero ===== */
 header {
-  min-height: auto;            /* keep compact */
+  background-color: #e6f2ff;
+  width: 100%;
   padding-top: 2rem;
-  padding-bottom: 0.5rem;      /* small gap under name */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  padding-bottom: 2rem;
 }
 
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem; /* space between image and text */
+}
+
+/* styles.css — single source of truth */
 .profile-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(0,0,0,0.1);
+  margin: 0; /* optional: avoids extra gap */
+}
+
+
+.header-text h1 {
+  margin: 0 0 0.25rem 0;
+}
+
+.header-text p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+
+
+
+/* .profile-img {
   width: 120px; height: 120px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
   border: 1px solid rgba(0,0,0,0.1);
-}
+} */
 
 h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
@@ -121,3 +149,5 @@ a:hover { opacity: .8; text-decoration: underline; }
   nav { top: 1rem; right: 1rem; }
   nav ul { gap: 1rem; }
 }
+
+
