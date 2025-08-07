@@ -3,11 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Rani Naaman Portfolio">
+  <meta name="description" content="Rani Naaman - Quantum Machine Learning Researcher">
   <title>Rani Naaman</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <div class="container">
     <header>
       <img src="assets/profile.jpg" alt="Profile Picture" class="profile-img"/>
@@ -15,38 +24,57 @@
       <p>MS Student in Quantum Machine Learning at Polytechnique Montreal</p>
     </header>
 
-    <section>
-    <h2>About</h2>
-    <p>
-        I am a Master's student at Polytechnique Montréal specializing in quantum computing and machine learning. My research explores hybrid quantum-classical models for anomaly detection, with a focus on leveraging quantum algorithms to enhance model efficiency and performance. I am passionate about advancing quantum machine learning and building practical tools that bridge theory and application.
-    </p>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am a Master's student at Polytechnique Montréal specializing in quantum computing and machine learning. My research explores hybrid quantum-classical models for anomaly detection, with a focus on leveraging quantum algorithms to enhance model efficiency and performance.
+      </p>
     </section>
 
+    <section id="research">
+      <h2>Research</h2>
+      
+      <div class="publication">
+        <h3 class="publication-title">Quantum Enhanced Anomaly Detection for ADS-B Data using Hybrid Deep Learning</h3>
+        <p class="publication-meta">DASC 2025</p>
+        <a href="#" class="publication-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          View Publication
+        </a>
+      </div>
+      
+      <div class="publication">
+        <h3 class="publication-title">Simultaneous stereo-PIV and OH/CH2O PLIF measurements in turbulent ultra-lean CH4/H2 swirling wall-impinging flames</h3>
+        <p class="publication-meta">ResearchGate, 2022</p>
+        <a href="https://www.researchgate.net/publication/365170504_Simultaneous_stereo-PIV_and_OHCH2O_PLIF_measurements_in_turbulent_ultra_lean_CH4H2_swirling_wall-impinging_flames" class="publication-link" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          Read on ResearchGate
+        </a>
+      </div>
+    </section>
 
-    <section>
+    <section id="education">
       <h2>Education</h2>
       <p><strong>MS in Computer Engineering</strong>, Polytechnique Montréal</p>
       <p><strong>B.Eng. in Aerospace Engineering</strong>, Polytechnique Montréal</p>
     </section>
 
-    <section>
-      <h2>Publications</h2>
-      <ul>
-        <li><strong>Quantum Enhanced Anomaly Detection for ADS-B Data using Hybrid Deep Learning</strong>, DASC 2025</li>
-        <!-- Add more as needed -->
-      </ul>
-    </section>
-
-    <section>
-      <h2>Thesis</h2>
-      <p><strong>Title:</strong> Quantum Enhanced Anomaly Detection for ADS-B Data using Hybrid Deep Learning</p>
-      <p><strong>Supervisor:</strong> Dr. Gabriela Nicolescu</p>
-    </section>
-
-    <section>
+    <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:rani.naaman@polymtl.ca">rani.naaman@polymtl.ca</a></p>
-      <p>GitHub: <a href="https://github.com/rnlibrary" target="_blank">rnlibrary</a></p>
+      <p>Feel free to reach out for collaborations or just to say hello!</p>
+      <div style="margin-top: 1.5rem;">
+        <a href="mailto:rani.naaman@polymtl.ca" style="margin-right: 1.5rem;">Email</a>
+        <a href="https://github.com/rnlibrary" target="_blank" style="margin-right: 1.5rem;">GitHub</a>
+        <a href="https://www.researchgate.net/profile/Rani-Naaman" target="_blank">ResearchGate</a>
+      </div>
     </section>
   </div>
 </body>
