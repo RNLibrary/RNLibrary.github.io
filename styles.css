@@ -163,13 +163,16 @@ a:hover { opacity: .8; text-decoration: underline; }
 }
 
 .project-img {
-  width: 100%;
-  max-width: 500px; /* limit size */
-  height: auto;
+  width: 100%;       /* fill the section width */
+  height: auto;      /* keep aspect ratio */
+  max-width: 100%;   /* no hard pixel cap */
+  max-height: 70vh;   /* adjust */
   border-radius: 8px;
   margin: 0.5rem 0 1rem 0;
   border: 1px solid rgba(0,0,0,0.1);
+  display: block;    /* avoids inline gaps */
 }
+
 
 
 /* ===== Education tweaks ===== */

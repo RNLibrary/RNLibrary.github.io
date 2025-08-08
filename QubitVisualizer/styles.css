@@ -11,8 +11,9 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  max-width: 2000px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none; 
+  margin: 0;
 }
 
 /* ==== Header & Footer ==== */
@@ -35,8 +36,9 @@ body {
 .content {
   display: flex;
   flex: 1;
-  padding: 20px;
-  gap: 20px;
+  padding: 10px;
+  gap: 10px;
+  height: 100%; 
 }
 
 .left-panel {
@@ -58,7 +60,8 @@ body {
 /* ==== Bloch Sphere ==== */
 #bloch-sphere {
   flex: 1;
-  min-height: 400px;
+  height: 100%;
+  min-height: 0;
 }
 
 .visualization {
