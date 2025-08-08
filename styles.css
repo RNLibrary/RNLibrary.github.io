@@ -6,6 +6,7 @@
   --link-color: #0066cc;
   --section-spacing-top: 1rem;    /* tighter top */
   --section-spacing-bottom: 1.25rem; /* modest bottom */
+  --section-max: 800px;
 }
 
 /* ===== Layout ===== */
@@ -37,7 +38,7 @@ header {
 .header-flex {
   display: flex;
   align-items: center;
-  gap: 2.5rem; /* space between image and text */
+  gap: 2.5rem; 
 }
 
 /* styles.css — single source of truth */
@@ -47,7 +48,7 @@ header {
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid rgba(0,0,0,0.1);
-  margin: 0; /* optional: avoids extra gap */
+  margin: 0; 
 }
 
 
@@ -102,7 +103,7 @@ section {
 h2 {
   font-size: 1.8rem;
   font-weight: 500;
-  margin: 0 0 1rem 0;        /* tighter */
+  margin: 0 0 1rem 0;      
   position: relative;
   display: inline-block;
 }
@@ -120,13 +121,13 @@ a:hover { opacity: .8; text-decoration: underline; }
 
 /* ===== Publications ===== */
 .publication {
-  margin: 0 0 .75rem 0;       /* tighter between items */
+  margin: 0 0 .75rem 0;       
   padding: 0 0 .75rem 0;
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 .publication:last-child { border-bottom: none; }
 
-.publication-title {          /* this block was broken before */
+.publication-title {         
   font-weight: 500;
   margin-bottom: .5rem;
 }
@@ -163,14 +164,49 @@ a:hover { opacity: .8; text-decoration: underline; }
 }
 
 .project-img {
-  width: 100%;       /* fill the section width */
-  height: auto;      /* keep aspect ratio */
-  max-width: 100%;   /* no hard pixel cap */
-  max-height: 70vh;   /* adjust */
+  width: 100%;       
+  height: auto;     
+  max-width: 100%;   
+  max-height: 70vh;   
   border-radius: 8px;
   margin: 0.5rem 0 1rem 0;
   border: 1px solid rgba(0,0,0,0.1);
   display: block;    /* avoids inline gaps */
+}
+
+/* Hero-style band for Contact */
+.contact-band {
+  background: #e6f2ff;
+  width: 100%;
+  max-width: none;       
+  margin: 2rem 0 0;       
+  padding: 2rem 0;        
+  border-top: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  
+}
+
+/* Center content to match page container */
+.contact-inner {
+  max-width: var(--section-max);  
+  margin: 0 auto;
+  padding: 0;                    
+  text-align: left;
+}
+
+/* Keep the same underline style on the heading */
+.contact-band h2 {
+  position: relative;
+  display: inline-block;
+}
+.contact-band h2::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 50%;
+  height: 1px;
+  background-color: var(--accent-color);
 }
 
 
