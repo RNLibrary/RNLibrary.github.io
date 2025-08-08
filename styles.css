@@ -140,6 +140,38 @@ a:hover { opacity: .8; text-decoration: underline; }
 }
 .publication-link:hover { background-color: rgba(0,0,0,0.1); text-decoration: none; }
 
+/* ===== Portfolio tweaks ===== */
+.project {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.project-title a {
+  color: var(--link-color);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.project-title a:hover {
+  text-decoration: underline;
+}
+
+.project-summary {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 500px; /* limit size */
+  height: auto;
+  border-radius: 8px;
+  margin: 0.5rem 0 1rem 0;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+
 /* ===== Education tweaks ===== */
 #education p { margin: 0 0 .5rem 0; }
 
