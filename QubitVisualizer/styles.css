@@ -281,3 +281,49 @@ button:hover {
 .state-header:hover .state-details {
   display: block;
 }
+
+
+/* ===== Mobile fixes (Android + iPhone) ===== */
+html { -webkit-text-size-adjust: 100%; }            /* iOS zoom guard */
+
+@media (max-width: 768px) {
+  /* Stack columns instead of squeezing them side-by-side */
+  .content {
+    flex-direction: column;
+    align-items: stretch;   /* full width panels */
+    height: auto;           /* avoid weird 100%/vh issues on mobile */
+  }
+
+  /* Let the controls fit on small screens */
+  .controls {
+    min-width: 0;           /* overrides the desktop min-width: 600px */
+    width: 100%;
+  }
+
+  /* Make the right panel fill width too */
+  .visualization {
+    width: 100%;
+  }
+
+  /* Give the Bloch sphere a sane mobile height (tweak as you like) */
+  #bloch-sphere {
+    height: 320px;          /* or 50vh; pick what looks better */
+  }
+
+  /* If circuits are wider than the screen, scroll horizontally instead of breaking layout */
+  .circuit-box {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Tooltips: pin to bottom center on phones so they don't pop off-screen */
+  .state-details {
+    position: fixed;
+    left: 50%;
+    bottom: 12px;
+    top: auto;
+    transform: translateX(-50%);
+    max-width: calc(100vw - 24px);
+    z-index: 9999;
+  }
+}
