@@ -283,27 +283,41 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-  /* 1) Stack the header and center text */
-  .header-flex {
+  /* Stack the two columns and center them */
+  .content {
     flex-direction: column;
-    text-align: center;
-  }
-  .header-text p {
-    margin-left: auto;
-    margin-right: auto;
+    align-items: center;   /* centers the child panels */
   }
 
-  /* 2) Visually center the Portfolio on phones */
-  #portfolio h2,
-  #portfolio > p {
-    text-align: center;
+  /* Let panels shrink to the phone width */
+  .left-panel,
+  .visualization {
+    width: 100%;
   }
-  #portfolio .project {
-    max-width: 640px;       /* keeps a comfortable card width */
-    margin: 0 auto 1rem;    /* centers the card */
+
+  /* Remove the desktop-only min-width that breaks mobile */
+  .controls {
+    min-width: 0;
+    width: 100%;
   }
-  .project-img {
-    display: block;
-    margin: 0.5rem auto 1rem; /* centers the image if it’s not full width */
+
+  /* Keep the Bloch sphere visible on short screens */
+  #bloch-sphere {
+    height: 320px;           /* or 50vh; pick what looks better */
+  }
+
+  /* If the circuit can get wide, allow horizontal scroll instead of pushing layout */
+  .circuit-box {
+    overflow-x: auto;
+  }
+
+  /* Optional: tooltips shouldn’t pop off-screen on phones */
+  .state-details {
+    position: fixed;
+    left: 50%;
+    bottom: 12px;
+    top: auto;
+    transform: translateX(-50%);
+    max-width: calc(100vw - 24px);
   }
 }
