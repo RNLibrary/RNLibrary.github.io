@@ -1,3 +1,8 @@
+/* Global reset for consistent sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* ===== Base tokens ===== */
 :root {
   --text-color: #333;
@@ -214,11 +219,55 @@ a:hover { opacity: .8; text-decoration: underline; }
 /* ===== Education tweaks ===== */
 #education p { margin: 0 0 .5rem 0; }
 
-/* ===== Responsive ===== */
 @media (max-width: 768px) {
+  /* header spacing + fixed nav adjustments */
   header { padding-top: 5rem; }
   nav { top: 1rem; right: 1rem; }
   nav ul { gap: 1rem; }
+
+  /* Stack and center hero */
+  .header-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  .profile-img {
+    width: 160px;
+    height: 160px;
+    display: block;
+    margin: 0 auto 0.5rem;
+  }
+
+  /* Center Portfolio on phones */
+  #portfolio { text-align: center; }
+  #portfolio h2,
+  #portfolio > p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: inherit;
+  }
+  #portfolio .project {
+    max-width: 640px;
+    margin: 0 auto 1rem;
+  }
+
+  /* Comfortable side padding for all sections */
+  section { padding-left: 1rem; padding-right: 1rem; }
 }
 
+@media (max-width: 380px) {
+  header { padding-top: 4rem; }
+  .profile-img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+
+/* iOS text zoom guard (optional but helpful) */
+html { -webkit-text-size-adjust: 100%; }
+
+section { scroll-margin-top: 90px; }
+html { scroll-behavior: smooth; } /* optional but nice */
 
