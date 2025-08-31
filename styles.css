@@ -238,6 +238,9 @@ a:hover { opacity: .8; text-decoration: underline; }
     display: block;
     margin: 0 auto 0.5rem;
   }
+  .contact-inner {
+    text-align: center;
+  }
 
   /* Center Portfolio on phones */
   #portfolio { text-align: center; }
@@ -269,5 +272,5 @@ a:hover { opacity: .8; text-decoration: underline; }
 html { -webkit-text-size-adjust: 100%; }
 
 section { scroll-margin-top: 90px; }
-html { scroll-behavior: smooth; } /* optional but nice */
+html { scroll-behavior: smooth; } 
 
