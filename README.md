@@ -1,5 +1,5 @@
 # Rani Naaman - Portfolio
 
-Personal academic website built for GitHub Pages. 
+Personal website built for GitHub Pages. 
 
 
